@@ -22,9 +22,9 @@ class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, this.title}) : super(key: key);
   final String? title;
   // if you want to run both phoenix and flutter [with emulator] in the same
-  // machine, point to your local machine [not localhost], as described in 
+  // machine, point to your local machine [not localhost], as described in
   // the README.md file.
-  final socket = PhoenixSocket("ws://my_server:4000/socket/websocket");
+  final socket = PhoenixSocket("ws://192.168.0.46:4000/socket/websocket");
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -62,7 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
     _textController.clear();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Divider(
-              height: 1.0,
+            height: 1.0,
           ),
           Container(
               child: MessageComposer(
